@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!--Links-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles/dashboard.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-white">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">  <img src="img/logo.png" class="logo" >  </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto">
+
+            <li class="nav-item">
+                <a class="nav-link text-black link-danger" href="index.html" >Início</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link text-black link-danger" href="#" >Restaurantes</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link text-black link-danger" href="#" >Mercados</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link text-black link-danger" href="#" >Bebidas</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link text-black link-danger" href="#">Farmácias</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link text-black link-danger" href="#" >Pets</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link text-black link-danger" href="#" >Shopping</a>
+            </li>
+            </ul>
+
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Busque por item ou loja" aria-label="Search">
+                <button class="btn btn-outline-danger" type="submit">Buscar</button>
+            </form>
+
+            <ul>
+                <li class="nav-item dropdown none_nav">
+                    <a class="nav-link dropdown-toggle" href="account.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <img src="img/login.png" class="login" href="account.html">
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item text-black link-danger fs-5" href="#">Chats</a></li>
+                        <li><a class="dropdown-item text-black link-danger fs-5" href="#">Pedidos</a></li>
+                        <li><a class="dropdown-item text-black link-danger fs-5" href="account.html">Minha conta</a></li>
+                        <li><a class="dropdown-item text-black link-danger fs-5" href="#">Favoritos</a></li>
+                        <li><a class="dropdown-item text-black link-danger fs-5" href="#">Pagamento</a></li>
+                        <li><a class="dropdown-item text-black link-danger fs-5" href="#">Fidelidade</a></li>
+                        <li><a class="dropdown-item text-black link-danger fs-5" href="#">Meus dados</a></li>
+                    </ul>
+            </li>
+            </ul>    
+
+            <ul>
+            <li class="nav-item dropdown none_nav">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  R. José Alquino, 10 
+                </a>
+            </li>
+            </ul>
+            
+        </div>
+        </div>
+    </nav>
+
+<!---------- Saldo --------------> 
+    <h2 class="fs-3 ps-5 pt-5 pb-3">Dashboard Financeiro</h2>
+    <div class="container mx-auto gap-3 row">
+
+    <div class="col-xl-5 col-sm-12">    
+    <div class="card" style="width: 30rem; height: 10rem;">
+        <div class="card-body row">  
+            <div class="col-6">
+                <ul>
+                    <li class="fs-5 pt-1">Saldo no iFood</li>
+                    <li class="fs-2 text-danger fw-bold ps-3 pt-3">109,80</li>
+                    <li class="fw-bold ps-3">110% do CDI</li>
+                </ul>    
+            </div>
+            <div class="col-6">
+            <button type="button" class="btn btn-danger btn-lg px-5">Depositar</button>
+            <p class="pt-5 fw-bold ">R$1.650 em outros bancos</p>
+            </div>    
+        </div>
+    </div>
+    </div>
+
+    <div  class="col-xl-5 col-sm-12">
+        <button type="button" class="btn btn-danger fs-5 px-5 " data-bs-toggle="modal" data-bs-target="#notaFiscal">Incluir NF</button>
+    </div>
+
+    </div>
+<!---------- Saldo -------------->
+<!---------- Dashboard -------------->
+    <div class="container mx-auto my-5 gap-3 row">
+
+        <div class="col-md-5 col-sm-12">
+        <div class="card" style="width: 25rem; height: 400px; overflow-y: auto;">
+            <div class="card-body">
+              <h5 class="card-title pb-2 fs-4">Receita</h5>
+              <ul>
+                <li class="text-success pb-2">Pizza Margherita: R$ 40,00</li>
+                <li class="text-success pb-2">Hambúrguer Artesanal: R$ 35,00</li>
+                <li class="text-success pb-2">Frango Grelhado com Legumes: R$ 45,00</li>
+                <li class="text-success pb-2">Salada Caesar: R$ 25,00</li>
+                <li class="text-success pb-2">Risoto de Cogumelos: R$ 55,00</li>
+                <li class="text-success pb-2">Sopa de Cebola: R$ 20,00</li>
+                <li class="text-success pb-2">Espaguete à Carbonara: R$ 50,00</li>
+                <li class="text-success pb-2">Tiramisu: R$ 30,00</li>
+                <li class="text-success pb-2">Café Expresso: R$ 10,00</li>
+                <li class="text-success pb-2">Suco Natural de Laranja: R$ 12,00</li>
+                <li class="text-success pb-2">Bife à Parmegiana - R$ 60,00</li>
+                <li class="text-success pb-2">Batata Frita - R$ 15,00</li>
+                <li class="text-success pb-2">Camarão à Provençal - R$ 80,00</li>
+                <li class="text-success pb-2">Brownie com Sorvete - R$ 25,00</li>
+                <li class="text-success pb-2">Suco Detox Verde - R$ 18,00</li>
+              </ul>
+            
+            </div>
+        </div>
+        </div>
+
+
+        <div class="col-md-5 col-sm-12">
+        <div class="card" style="width: 25rem; height: 400px; overflow-y: auto;">
+            <div class="card-body">
+              <h5 class="card-title pb-2 fs-4">Despesas</h5>
+              
+            <ul>
+                <li class="text-danger pb-2">Compra de carnes:  - R$ 400,00</li>
+                <li class="text-danger pb-2">Legumes e verduras frescas:  - R$ 300,00</li>
+                <li class="text-danger pb-2">Pão para hambúrgueres:  - R$ 150,00</li>
+                <li class="text-danger pb-2">Queijo mussarela:  - R$ 200,00</li>
+                <li class="text-danger pb-2">Embalagens para entrega:  - R$ 100,00</li>
+                <li class="text-danger pb-2">Despesas com gás de cozinha:  - R$ 250,00</li>
+                <li class="text-danger pb-2">Pagamento de funcionários:  - R$ 2.500,00</li>
+                <li class="text-danger pb-2">Bebidas (reposição de refrigerantes e sucos):  - R$ 400,00</li>
+                <li class="text-danger pb-2">Manutenção de equipamentos (forno e geladeira):  - R$ 300,00</li>
+                <li class="text-danger pb-2">Produtos de limpeza:  - R$ 150,00</li>
+                <li class="text-danger pb-2">Molhos e temperos - R$ 120,00</li>
+                <li class="text-danger pb-2">Arroz e massas - R$ 180,00</li>
+                <li class="text-danger pb-2">Conta de energia elétrica - R$ 700,00</li>
+                <li class="text-danger pb-2">Aluguel do espaço - R$ 3.000,00</li>
+                <li class="text-danger pb-2">Marketing e publicidade - R$ 500,00</li>
+            </ul>
+              
+            </div>
+        </div>
+        </div>
+    </div>
+<!---------- Dashboard -------------->
+<!---------- Relatório -------------->
+    <h2 class="fs-3 ps-5 pt-5 pb-3">Relatório</h2>
+
+    <div class="container_chart">    
+    <div class="chart-wrapper">
+        <canvas id="receitaChart"></canvas>
+    </div>
+    </div>
+<!---------- Relatório -------------->
+
+    <footer>
+
+        <hr class="divisor">
+    
+        <div class="container row mx-auto g-2 pb-5">
+        
+        <div class="col-4">
+        <ul>
+            <li class="text-secondary text-space fw-bold">ifood</li>
+            <li class="text-secondary text-space">Site Institucional</li>
+            <li class="text-secondary text-space">Fale conosco</li>
+            <li class="text-secondary text-space">Carreiras</li>
+            <li class="text-secondary">Empregadores</li>
+        </ul>
+        </div>
+    
+        <div class="col-4">
+        <ul>
+            <li class="text-secondary text-space fw-bold">Descubra</li>
+            <li class="text-secondary text-space">Cadastre seu Restaurante ou Mercado</li>
+            <li class="text-secondary text-space">iFood Shop</li>
+            <li class="text-secondary text-space">iFood Card</li>
+            <li class="text-secondary">Blog iFood Empresas</li>
+        </ul>
+        </div>
+    
+    
+        <div class="col-4">
+            <ul>
+                <li class="text-secondary text-space fw-bold">Social</li>
+                <div class="d-flex gap-5">    
+                <li class="text-secondary text-space" style="width: 30px;"><img src="/img/facebook.svg"></li>
+                <li class="text-secondary text-space" style="width: 30px;"><img src="/img/youtube.svg"></li>
+                <li class="text-secondary" style="width: 30px;"><img src="/img/instagram.png"></li>
+                </div>
+            </ul>
+        </div>
+    
+        </div>
+    
+    
+    
+        <hr class="divisor">
+    
+        <div class="container row mx-auto g-2 pb-5">
+    
+        <div class="col-1">    
+        <div><img src="img/smile.png" class="logo"></div>
+        </div>
+    
+        <div class="col-5">
+        <div>
+            <ul>
+                <li class="text-body-tertiary">© Copyright 2021 - iFood - Todos os direitos reservados iFood com Agência de Restaurantes Online S.A</li>
+                <li class="text-body-tertiary">CNPJ 14.380.200/0001-21 /Avenida dos Autonomistas, nº 1496, Vila Yara, Osasco/SP - CEP 06.020-902</li>
+            </ul>
+        </div>
+        </div>
+        
+        <div class="col-6">
+        <div>
+            <ul class="d-flex justify-content-around">
+                <li class="text-secondary">Termos e condições de uso</li>
+                <li class="text-secondary">Código de conduta</li>
+                <li class="text-secondary">Privacidade</li>
+                <li class="text-secondary">Dicas de segurança</li>
+            </ul>
+        </div>
+        </div>
+    
+        </div>
+    
+    </footer>  
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="notaFiscal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h1 class="modal-title fs-4 text-danger fw-bold" id="exampleModalLabel">Nota Fisca</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!---->
+                <form>
+                    <div class="form-group">
+                      <label for="date">Data:</label>
+                      <input type="date" class="form-control" id="date" name="date" required>
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="invoiceNumber">Número da Nota Fiscal:</label>
+                      <input type="text" class="form-control" id="invoiceNumber" name="invoiceNumber" placeholder="Digite o número da nota fiscal" required>
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="amount">Valor:</label>
+                      <input type="number" step="0.01" class="form-control" id="amount" name="amount" placeholder="Digite o valor da nota fiscal" required>
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="operationType">Tipo de Operação:</label>
+                      <select class="form-control" id="operationType" name="operationType" required>
+                        <option value="">Selecione</option>
+                        <option value="entrada">Entrada</option>
+                        <option value="saida">Saída</option>
+                      </select>
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="description">Descrição:</label>
+                      <textarea class="form-control" id="description" name="description" rows="3" placeholder="Digite uma descrição (opcional)"></textarea>
+                    </div>
+                    
+                  </form>
+                <!---->
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Incluir</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Script bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script defer src="script/chart.js"></script>
+
+</body>
+</html>

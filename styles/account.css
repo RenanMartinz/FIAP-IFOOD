@@ -1,0 +1,10 @@
+@import url('styles/headfoot.css');
+
+.login{
+    width: 25px;
+}
+
+.img_service{
+    width: 100px;
+    align-self: center;
+}

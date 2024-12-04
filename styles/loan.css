@@ -1,0 +1,20 @@
+@import url("/styles/headfoot.css");
+
+
+#valorInput{
+    border: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.valor_emprestimo{
+    margin: none;
+}
+
+
+/**/
